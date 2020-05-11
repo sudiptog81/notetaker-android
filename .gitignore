@@ -1,0 +1,11 @@
+*.iml
+.gradle
+.idea/libraries
+.idea/caches
+.DS_Store
+build
+captures
+.externalNativeBuild
+.cxx
+app/release
+google-services.json

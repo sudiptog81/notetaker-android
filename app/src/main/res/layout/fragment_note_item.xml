@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="?attr/selectableItemBackground"
+  android:minHeight="70dp">
+
+  <TextView
+    android:id="@+id/id_note"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="invisible" />
+
+  <ImageView
+    android:id="@+id/icon_note"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="9dp"
+    android:padding="16dp"
+    android:tint="@color/colorAccent"
+    app:srcCompat="@drawable/ic_book_24dp" />
+
+  <TextView
+    android:id="@+id/title_note"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@id/icon_note"
+    android:maxLines="1"
+    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
+    android:text="Title"
+    android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+  <TextView
+    android:id="@+id/subtitle_note"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/title_note"
+    android:layout_gravity="center_vertical"
+    android:layout_toEndOf="@id/icon_note"
+    android:maxLines="2"
+    android:paddingEnd="16dp"
+    android:text="Subtitle"
+    android:textAppearance="?attr/textAppearanceBody2" />
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/drawer"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/appbar_top"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:menu="@menu/top_app_bar_menu"
+        app:title="@string/app_name"
+        app:titleTextColor="@android:color/primary_text_dark" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/fab_add_note"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|end"
+      android:layout_margin="@dimen/fab_margin"
+      app:srcCompat="@drawable/ic_add_24dp" />
+
+    <TextView
+      android:id="@+id/textview_no_notes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      style="@style/TextAppearance.MaterialComponents.Body2"
+      android:visibility="invisible"
+      android:text="@string/no_notes" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/swipe_refresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

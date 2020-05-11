@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+    android:id="@+id/menuitem_logout"
+    android:contentDescription="@string/logout"
+    android:icon="@drawable/ic_logout_24dp"
+    android:title="@string/logout"
+    app:showAsAction="ifRoom" />
+  <item
+    android:id="@+id/menuitem_feedback"
+    android:contentDescription="@string/feedback"
+    android:icon="@drawable/ic_feedback_24dp"
+    android:title="@string/feedback"
+    app:showAsAction="ifRoom" />
+</menu>
